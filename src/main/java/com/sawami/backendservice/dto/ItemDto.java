@@ -1,26 +1,16 @@
-package com.sawami.backendservice.entity;
+package com.sawami.backendservice.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
 
-@Entity
-@Table(name = "items")
 @Data
-public class Item {
-	@Id
-	@GeneratedValue
-	Long itemId;
+@NoArgsConstructor
+public class ItemDto {
 	Integer branchSysNo;
 	Integer yearSysNo = -1;
 	Integer storeSysNo;
@@ -28,17 +18,12 @@ public class Item {
 	Integer unitSysNo;
 	String unitBarcodeNo;
 	String itemNo;
-	@Column(name = "item_name_a")
 	String itemNameA;
-	@Column(name = "item_name_e")
 	String itemNameE;
 	String itemPartNo;
 	String itemBrandName;
 	String itemColor;
 	String itemSize;
-	@Lob
-	@Type(type = "org.hibernate.type.BinaryType")
-	private byte[] itemImage;
 	private String itemLocation;
 	private String itemLocation2;
 	BigDecimal maximumQuantity;
@@ -73,7 +58,7 @@ public class Item {
 	BigDecimal profitPercentage;
 	BigDecimal itemDiscountAmount;
 	BigDecimal itemDiscountPercentage;
-	Short discountMethod;
+	Short DiscountedMethod;
 	Boolean privateSalesPolicy;
 	String notes;
 	BigDecimal salesPriceMargin;
@@ -87,8 +72,4 @@ public class Item {
 	LocalDate lastJrdDate;
 	BigDecimal salesPrice2;
 	BigDecimal salesPrice3;
-
-	public Item() {
-		//no-op
-	}
 }
