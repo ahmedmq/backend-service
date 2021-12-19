@@ -33,7 +33,7 @@ public class ItemController {
 	}
 
 	@PostMapping(value = "/api/items" , produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ItemDto createItem(ItemDto itemDto){
+	public ItemDto createItem(@RequestBody ItemDto itemDto){
 		Item item = itemMapper.toItem(itemDto);
 		Item savedItem = itemRepository.save(item);
 		return itemMapper.fromItem(savedItem);
