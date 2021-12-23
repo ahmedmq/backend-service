@@ -39,23 +39,23 @@ public class ItemController {
 		return itemMapper.fromItem(savedItem);
 	}
 
-	@GetMapping(value = "/api/items/{itemId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ItemDto getItemById(@PathVariable Long itemId){
-		Item item = itemRepository.findById(itemId).orElseThrow(()-> new RuntimeException("Item with ["+itemId+"] not found"));
+	@GetMapping(value = "/api/items/{itemNo}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ItemDto getItemById(@PathVariable String itemNo){
+		Item item = itemRepository.findById(itemNo).orElseThrow(()-> new RuntimeException("Item with ["+ itemNo +"] not found"));
 		return itemMapper.fromItem(item);
 	}
 
-	@PutMapping(value = "/api/items/{itemId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ItemDto updateItemById(@PathVariable Long itemId, @RequestBody ItemDto itemDto){
-		Item item = itemRepository.findById(itemId).orElseThrow(()-> new RuntimeException("Item with ["+itemId+"] not found"));
+	@PutMapping(value = "/api/items/{itemNo}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ItemDto updateItemById(@PathVariable String itemNo, @RequestBody ItemDto itemDto){
+		Item item = itemRepository.findById(itemNo).orElseThrow(()-> new RuntimeException("Item with ["+ itemNo +"] not found"));
 		itemMapper.updateItemFromDto(itemDto,item);
 		item = itemRepository.save(item);
 		return itemMapper.fromItem(item);
 	}
 
-	@DeleteMapping(value = "/api/items/{itemId}")
+	@DeleteMapping(value = "/api/items/{itemNo}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteItemById(@PathVariable Long itemId){
-		itemRepository.deleteById(itemId);
+	public void deleteItemById(@PathVariable String itemNo){
+		itemRepository.deleteById(itemNo);
 	}
 }

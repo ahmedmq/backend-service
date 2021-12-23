@@ -1,15 +1,12 @@
-create sequence if not exists hibernate_sequence start with 1 increment by 1;
-
 create table if not exists items
 (
-    item_id                      integer,
+    item_no                      varchar(20),
     branch_sys_no                integer,
     year_sys_no                  integer default -1,
     store_sys_no                 integer,
     item_sys_no                  integer,
     unit_sys_no                  integer,
     unit_barcode_no              varchar(20),
-    item_no                      varchar(20),
     item_name_a                  varchar(45),
     item_name_e                  varchar(45),
     item_part_no                 varchar(20),
@@ -65,5 +62,7 @@ create table if not exists items
     last_jrd_date                date,
     sales_price2                 numeric,
     sales_price3                 numeric,
-    constraint item_id_pkey primary key (item_id)
+    constraint item_id_pkey primary key (item_no)
 );
+
+create sequence if not exists hibernate_sequence start with 1 increment by 1;

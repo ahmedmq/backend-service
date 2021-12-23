@@ -5,7 +5,6 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
@@ -19,15 +18,13 @@ import org.hibernate.annotations.Type;
 @Data
 public class Item {
 	@Id
-	@GeneratedValue
-	Long itemId;
+	String itemNo;
 	Integer branchSysNo;
 	Integer yearSysNo = -1;
 	Integer storeSysNo;
 	Integer itemSysNo;
 	Integer unitSysNo;
 	String unitBarcodeNo;
-	String itemNo;
 	@Column(name = "item_name_a")
 	String itemNameA;
 	@Column(name = "item_name_e")

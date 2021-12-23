@@ -11,13 +11,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class ItemDto {
+	String itemNo;
 	Integer branchSysNo;
 	Integer yearSysNo = -1;
 	Integer storeSysNo;
 	Integer itemSysNo;
 	Integer unitSysNo;
 	String unitBarcodeNo;
-	String itemNo;
 	String itemNameA;
 	String itemNameE;
 	String itemPartNo;
