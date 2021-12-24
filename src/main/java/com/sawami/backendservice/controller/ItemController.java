@@ -1,16 +1,23 @@
 package com.sawami.backendservice.controller;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import javax.servlet.http.HttpServletResponse;
 
 import com.sawami.backendservice.dto.ItemDto;
 import com.sawami.backendservice.entity.Item;
 import com.sawami.backendservice.mapper.ItemMapper;
+import com.sawami.backendservice.report.ItemReportService;
 import com.sawami.backendservice.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
+import net.sf.jasperreports.engine.JRException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,6 +33,7 @@ public class ItemController {
 
 	private final ItemRepository itemRepository;
 	private final ItemMapper itemMapper;
+	private final ItemReportService itemReportService;
 
 	@GetMapping(value = "/api/items", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<ItemDto> getItems(){
@@ -57,5 +65,11 @@ public class ItemController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void deleteItemById(@PathVariable String itemNo){
 		itemRepository.deleteById(itemNo);
+	}
+
+	@GetMapping(value = "/api/items/report/itemSummary")
+	public ResponseEntity<Void> downloadItemSummaryReport(HttpServletResponse httpServletResponse) throws JRException, SQLException, IOException {
+		itemReportService.downloadItemSummaryReport(httpServletResponse);
+		return ResponseEntity.ok().build();
 	}
 }

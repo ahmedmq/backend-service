@@ -3,8 +3,6 @@ package com.sawami.backendservice.dto;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import javax.persistence.Lob;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
