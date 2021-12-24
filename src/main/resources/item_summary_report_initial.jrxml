@@ -403,7 +403,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_no}]]></textFieldExpression>
 			</textField>
@@ -419,7 +419,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_name_e}]]></textFieldExpression>
 			</textField>
@@ -435,7 +435,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_part_no}]]></textFieldExpression>
 			</textField>
@@ -451,7 +451,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_color}]]></textFieldExpression>
 			</textField>
@@ -467,7 +467,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_size}]]></textFieldExpression>
 			</textField>
@@ -483,7 +483,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_brand_name}]]></textFieldExpression>
 			</textField>
@@ -498,7 +498,9 @@
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{item_location}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
@@ -513,7 +515,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_label}]]></textFieldExpression>
 			</textField>
@@ -529,7 +531,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_group}]]></textFieldExpression>
 			</textField>
@@ -545,7 +547,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{item_quantity}]]></textFieldExpression>
 			</textField>
@@ -561,7 +563,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{purchase_price}]]></textFieldExpression>
 			</textField>
@@ -575,7 +577,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sales_price}]]></textFieldExpression>
 			</textField>
@@ -591,7 +593,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{vat_percentage}]]></textFieldExpression>
 			</textField>
@@ -611,7 +613,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#EEEEEE"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{totalQty}]]></textFieldExpression>
 			</textField>
